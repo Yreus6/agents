@@ -197,7 +197,7 @@ class SpeechHandle:
             return self
 
         if not force and not self._allow_interruptions:
-            raise RuntimeError("This generation handle does not allow interruptions")
+            logger.warning("This generation handle does not allow interruptions")
 
         self._cancel()
         return self
